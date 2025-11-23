@@ -18,10 +18,10 @@ class ZipEditorApp(tk.Tk):
         frm = ttk.Frame(self)
         frm.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-        self.open_btn = ttk.Button(frm, text="Open Zip", command=self.open_zip)
+        self.open_btn = ttk.Button(frm, text="Open MCWORLD", command=self.open_zip)
         self.open_btn.grid(row=0, column=0, sticky="ew")
 
-        self.save_btn = ttk.Button(frm, text="Save Zip", command=self.save_zip, state=tk.DISABLED)
+        self.save_btn = ttk.Button(frm, text="Save MCWORLD", command=self.save_zip, state=tk.DISABLED)
         self.save_btn.grid(row=0, column=1, sticky="ew")
 
         self.filebox = tk.Listbox(frm, height=15)
@@ -31,11 +31,11 @@ class ZipEditorApp(tk.Tk):
         frm.rowconfigure(1, weight=1)
         frm.columnconfigure(1, weight=1)
 
-        self.text = tk.Text(frm, wrap=tk.NONE)
+        self.text = tk.Text(frm, wrap=tk.NONE, bg="light yellow")
         self.text.grid(row=1, column=2, sticky="nsew")
         frm.columnconfigure(2, weight=3)
 
-        self.save_file_btn = ttk.Button(frm, text="Save File", command=self.save_file_content, state=tk.DISABLED)
+        self.save_file_btn = ttk.Button(frm, text="Save the File", command=self.save_file_content, state=tk.DISABLED)
         self.save_file_btn.grid(row=2, column=2, sticky="ew")
 
     def open_zip(self):
